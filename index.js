@@ -1,3 +1,4 @@
+require('dotenv').config()
 // Require Express to consume modules.
 const express = require('express');
 
@@ -9,5 +10,12 @@ app.get('/', function(req, res){
     res.send('Hello World!')
 })
 
+// Wild card route - ensures user/client gets a graceful message that the path doesn't exist
+app.get('*', (req, res) => {
+    res.status(404).send('<h1>404 Page</h1>')
+})
+
 // Keep server open
-app.listen(3000, () => console.log('I am awake!'))
+app.listen(process.env.PORT, function() {
+    console.log('I am awake!')
+})
