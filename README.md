@@ -1,7 +1,6 @@
 # Project REST-Rant
 
-<<<<<<< HEAD
-REST-Rant is an app where users can review restaurants.
+REST-Rant is an app where users can review restaurants. 🍽️
 
 Part 1:
 User stories TBD
@@ -39,6 +38,13 @@ DELETE || /places/:id/rant/:rantId ||Delete a rant (comment) about a particular 
 GET || \* || 404 page (matches any route not defined above)
 
 ---
-=======
-REST-Rant is an app where users can review restaurants. 🍽️
->>>>>>> e9eae93ddc28aeb68dff2cba40dad287372d8be6
+
+Part 4:
+Plan Your Data
+places (string)
+city (string)
+state (string)
+cuisines (string)
+pic (string)
+
+
