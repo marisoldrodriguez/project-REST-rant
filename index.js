@@ -19,7 +19,7 @@ app.get("/", function (req, res) {
 
 // Wild card route - ensures user/client gets a graceful message that the path doesn't exist
 app.get("*", (req, res) => {
-  res.status(404).send("<h1>404 Page</h1>");
+  res.render('error404');
 });
 
 // Keep server open
