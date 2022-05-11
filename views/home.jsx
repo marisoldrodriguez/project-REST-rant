@@ -10,6 +10,10 @@ function home(){
             <main>
                 <h1>HOME</h1>
             </main>
+            <a href="/places">
+            <button className="btn-primary">Places Page</button>
+            </a> 
+            {/* Inside JSX, we use 'className' instead of 'class' like we would in regular HTML.  */}
         </Def>
     )
 
