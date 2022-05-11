@@ -16,6 +16,11 @@ app.use(express.static('public'))
 // Imports routes to index.js from controllers folder file places (code to import the router)
 app.use("/places", require("./controllers/places"));
 
+// Body parser included in Express
+// What does this do?
+// Remember, when we send data with the POST verb, that data gets encrypted for its trip across the internet. Because it is protected this way while in transit, that makes it extra safe for usernames, passwords, and other sensitive data. However, it also means we will need an extra tool to decrypt that data for us.
+app.use(express.urlencoded({ extended: true } ) )
+
 // Create a homepage
 app.get("/", function (req, res) {
   res.render('home'); //Note: You don't have to specify the 'views' folder. It already knows to look for a 'views' folder when you call the render method!
