@@ -1,5 +1,10 @@
-h1 {
+body {
     text-align: center;
     color: cornflowerblue;
   }
   
+  img {
+    width: 50%;
+    display: block;
+    margin: auto;
+  }

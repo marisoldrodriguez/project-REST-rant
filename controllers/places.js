@@ -8,13 +8,13 @@ router.get('/', (req, res) => {
         city: 'Seattle',
         state: 'WA',
         cuisines: 'Thai, Pan-Asian',
-        pic: 'http://placekitten.com/250/250'
+        pic: '/images/stir-fry-wok.jpg'
       }, {
         name: 'Coding Cat Cafe',
         city: 'Phoenix',
         state: 'AZ',
         cuisines: 'Coffee, Bakery',
-        pic: 'http://placekitten.com/250/250'
+        pic: '/images/coffee-shop.jpg'
       }]
       
     res.render('places/index', {places}) //Remember, the route is '/' because when we included this route in index.js, we set it relative to '/places', so we don't need to specify it again here.
