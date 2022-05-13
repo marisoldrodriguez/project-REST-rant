@@ -23,7 +23,11 @@ function index (data) {
                 <div className="row">
                 {placesFormatted}
                 </div>
-            </main>
+            
+            <div className='newButton'>
+                <a href='/places/new'><button>Add a new place</button></a>
+            </div>
+        </main>
         </Def>
     )
 }
