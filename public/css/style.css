@@ -8,6 +8,11 @@ body {
     margin-left: 20px;
     background-color: white;
   }
+
+  form {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
   
   img {
     width: 50%;
@@ -39,4 +44,4 @@ nav a:hover {
     color: pink;
     text-decoration: none;
 }
- 
+
