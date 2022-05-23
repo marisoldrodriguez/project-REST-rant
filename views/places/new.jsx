@@ -19,8 +19,8 @@ function New () {
                     </div>
                     <div className='form-group'>
                         <label htmlFor="state">State Name</label>
-                        {/* <input className='form-control' type="text" id="state" name="state" /> */}
-                        <div><select name="state">
+                        <input className='form-control' type="text" id="state" name="state" />
+                        {/* <div><select name="state">
 	<option value="AL">Alabama</option>
 	<option value="AK">Alaska</option>
 	<option value="AZ">Arizona</option>
@@ -72,7 +72,7 @@ function New () {
 	<option value="WV">West Virginia</option>
 	<option value="WI">Wisconsin</option>
 	<option value="WY">Wyoming</option>
-</select></div>
+</select></div> */}
                     </div>
                     <div className='form-group'>
                         <label htmlFor="cuisines">Cuisines</label>
@@ -83,8 +83,13 @@ function New () {
                         <input className='form-control' type="url" id="pic" name="pic" />
                     </div>
 					<div className="form-group">
-						<label for="founded">Founded Year</label>
-						<input className="form-control" id="founded" name="founded" />
+						<label htmlFor="founded">Founded Year</label>
+						<input 
+						type='number'
+						className="form-control" 
+						id="founded" 
+						name="founded"
+						value={new Date().getFullYear()} />
 					</div>
 
                     <input className='btn btn-primary' type='submit' value='Add Place' />

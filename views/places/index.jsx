@@ -6,7 +6,7 @@ const Def = require('../default') //default is located under parent folder views
 function index (data) {
     let placesFormatted = data.places.map((place) => {
         return (
-            <div className="col-sm-6">
+            <div className="col-sm-6" key={place.id}>
                 <h2>
                     <a href={`/places/${place.id}`}>
                         {place.name}
