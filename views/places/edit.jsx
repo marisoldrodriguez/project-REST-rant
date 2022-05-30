@@ -81,7 +81,7 @@ function edit_form (data) {
                         <label htmlFor="pic">Place Picture</label>
                         <input className='form-control' type="url" id="pic" name="pic"  value={data.place.pic}/>
                     </div>
-                    <input className='btn btn-primary' type='submit' value='Add Place' />
+                    <input className='btn btn-primary' type='submit' value='Edit Place' />
                 </form>
             </main>
         </Def>

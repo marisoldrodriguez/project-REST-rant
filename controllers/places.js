@@ -61,7 +61,7 @@ router.get('/:id/edit', (req, res) => {
 }
 })
 
-// UPDATE
+// UPDATE - put route
 router.put('/:id', (req, res) => {
   let id = Number(req.params.id)
     if (isNaN(id)) {
