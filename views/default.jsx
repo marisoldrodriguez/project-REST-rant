@@ -26,6 +26,7 @@ function Def (html) {
                     </ul>
                 </nav>
                 {html.children}
+                <footer className="footer">Marisol Rodriguez Rest-rant project</footer>
             </body>
         </html>
     )
