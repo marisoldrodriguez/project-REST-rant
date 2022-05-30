@@ -48,10 +48,13 @@ router.get('/:id', (req, res) => {
 })
 
 // EDIT
+router.get('/:id/edit', (req, res) => {
+  res.send('GET edit form stub')
+})
 
 // UPDATE
 
-// DESTROY
+// DELETE
 router.delete('/:id', (req, res) => {
   let id = Number(req.params.id)
   if (isNaN(id)) {
