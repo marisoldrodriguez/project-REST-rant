@@ -26,6 +26,7 @@ function show (data) {
                             </form>
                     </div>                  
                 </div>
+                <hr />
                 <h2>Comments</h2>
                 <p>No comments yet!</p>
             </main>
