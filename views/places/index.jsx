@@ -4,11 +4,11 @@ const Def = require('../default') //default is located under parent folder views
 
 // stub index function
 function index (data) {
-    let placesFormatted = data.places.map((place, index) => {
+    let placesFormatted = data.places.map((place) => {
         return (
-            <div className="col-sm-6">
+            <div className="col-sm-6" key={place.id}>
                 <h2>
-                    <a href={`/places/${index}`}>
+                    <a href={`/places/${place.id}`}>
                         {place.name}
                     </a>
                 </h2>
