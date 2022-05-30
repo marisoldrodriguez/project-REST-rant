@@ -82,7 +82,7 @@ function New () {
                         <label htmlFor="pic">Place Picture</label>
                         <input className='form-control' type="url" id="pic" name="pic" />
                     </div>
-					<div className="form-group">
+					<div className='form-group'>
 						<label htmlFor="founded">Founded Year</label>
 						<input 
 						type='number'
