@@ -45,19 +45,28 @@ function show (data) {
                 </div>
                 <hr />
                 <h2>Comments</h2>
-                {comments}
+                <div className='row'>
+                    {comments}
+                </div>
                 <hr/>
                 <h2>Please leave a comment!</h2>
                                 <form action={`/places/${data.place._id}/comment`} method="POST">
-                                    <div className="row">
+                                    
                                         <label htmlFor="content">Content</label>
                                         <textarea id="content" name="content" className="form-control"></textarea>
-                                        <label htmlFor="author">Author</label>
-                                        <input id="author" name="author" className="form-control" />
-                                        <label htmlFor="stars">Star Rating</label>
-                                <input type="range" step="0.5" min="1" max="5" id="stars" name="stars" className="form-control" />
-                                        <label htmlFor="rant">Rant!{data.place.rant}!</label>
-                                        <input type="checkbox" id="rant" name="rant" className="form-control form-check-input" />
+                                    <div className="row">
+                                        <div className="form-group col-sm-5">    
+                                            <label htmlFor="author">Author</label>
+                                            <input id="author" name="author" className="form-control" />
+                                        </div>
+                                        <div className="form-group col-sm-5">
+                                            <label htmlFor="stars">Star Rating</label>
+                                            <input type="range" step="0.5" min="1" max="5" id="stars" name="stars" className="form-control" />
+                                        </div>
+                                        <div className="form-group col-sm-2">   
+                                            <label htmlFor="rant">Rant!{data.place.rant}!</label>
+                                            <input type="checkbox" id="rant" name="rant" className="form-control form-check-input" />
+                                        </div>     
                                     </div>
                                     <div className='text-center'>
                                         <br/>
