@@ -45,8 +45,10 @@ function show (data) {
                 </div>
                 <hr />
                 <h2>Comments</h2>
-                <div className='row'>
-                    {comments}
+                <div className='d-flex align-items-stretch'>
+                    {/* <div className="form-group rw-sm-4">  */}
+                        {comments}
+                    {/* </div>        */}
                 </div>
                 <hr/>
                 <h2>Please leave a comment!</h2>
