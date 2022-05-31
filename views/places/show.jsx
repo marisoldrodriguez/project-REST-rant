@@ -2,6 +2,23 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
+    let comments = (
+        <h3 className='inactive'>No comments yet!</h3>
+    )
+    if (data.place.comments.length) {
+        comments = data.place.comments.map(c => {
+            return (
+                <div className='border'>
+                    <h2 className='rant'>{c.rant ? `Rant! 😡` : `Rave! 😻` }</h2>
+                    <h4>{c.content}</h4>
+                    <h3>
+                        <strong>- {c.author}</strong>
+                    </h3>
+                    <h4>Rating: {c.stars}</h4>
+                </div>
+            )
+        })
+    }
     return (
         <Def>
             <main>
@@ -28,7 +45,26 @@ function show (data) {
                 </div>
                 <hr />
                 <h2>Comments</h2>
-                <p>No comments yet!</p>
+                {comments}
+                <hr/>
+                <h2>Please leave a comment!</h2>
+                                <form action={`/places/${data.place._id}/comment`} method="POST">
+                                    <div className="row">
+                                        <label htmlFor="content">Content</label>
+                                        <textarea id="content" name="content" className="form-control"></textarea>
+                                        <label htmlFor="author">Author</label>
+                                        <input id="author" name="author" className="form-control" />
+                                        <label htmlFor="stars">Star Rating</label>
+                                <input type="range" step="0.5" min="1" max="5" id="stars" name="stars" className="form-control" />
+                                        <label htmlFor="rant">Rant!{data.place.rant}!</label>
+                                        <input type="checkbox" id="rant" name="rant" className="form-control form-check-input" />
+                                    </div>
+                                    <div className='text-center'>
+                                        <br/>
+                                        <br/>
+                                        <input className='btn btn-primary' type='submit' value='Add Comment' />
+                                    </div>
+                                </form>
             </main>
         </Def>
     )
